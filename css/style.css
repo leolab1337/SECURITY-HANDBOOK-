@@ -1,0 +1,292 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    /* --plum: #4b0d49; */
+    --plum: #3b1f4b;
+    /* --hotmag: #ff17e4; */
+    --hotmag: #7a47c7;
+    /* --magenta: #e310cb; */
+    --magenta: #8e67c9;
+    --aqua: #86fbfb;
+    /* --aqua: #28a0c9; */
+    --white: #f7f8fa;
+    --orange: #E95B0B;
+    --orangeBorder:#b4490b;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    /* outline: 1px solid red; */
+}
+
+/* generic styles for the page */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--aqua);
+}
+
+a:hover {
+    color: var(--orangeBorder);
+    text-decoration: none;
+}
+
+img{
+    width:100%;
+    
+  }
+
+
+/* navigation */
+nav {
+  font-family: var(--mono);
+  font-size: 100%;
+  padding: 4rem 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  /* horisontal */
+  justify-content: center;
+  /* vertical */
+  align-items: center;
+  /* set distance between elements  */
+  gap: 1rem;
+}
+nav li:first-child {
+  /* it occupies 100% of the log space */
+  flex-basis: 100%;
+  text-align: center;
+}
+
+
+
+
+nav h1  [class*="fa"]{
+  font-size: 100%;
+  padding-right: 0.1rem;
+}
+
+
+/* it is good to use display block for links in navbar  */
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover ,
+nav [class*="fa-"]:hover{
+  color: var(--orangeBorder);
+}
+
+
+/* Section picture */
+.section-pic {
+    padding: 0rem 1rem 2.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-pic img {
+      min-height: 200px;
+      border: var(--dkblue) 2px solid;
+      border-left: var(--orangeBorder) 2px solid;
+      border-top: var(--orangeBorder) 3px solid;
+      border-bottom: var(--dkblue)2px solid;
+      /* box-shadow: 0px 0px 7px 2px  rgba(214, 107, 19, 0.616); */
+        box-shadow: 1px 1px 4px 1px  rgba(214, 107, 19, 0.616), 5px 2px 80px 2px  rgba(49, 170, 197, 0.3);
+  }
+
+
+
+/* Section cards */
+
+.wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+.section-cards { 
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 3rem;
+  justify-content: space-evenly; 
+  
+  
+  }
+.section-cards > article {
+  border-left: 3px solid var(--orangeBorder);
+    border-top: 4px solid var(--orangeBorder);
+    
+    border-radius: 9px;
+box-shadow: 0px 0px 3px 3px  rgba(214, 107, 19, 0.616);
+  background-color: var(--white);
+}
+.section-cards > article img {
+    
+  max-width: 100%;
+   border-bottom: 1.5px solid var(--orangeBorder);
+  
+ 
+}
+.text {
+    
+    text-align: left;
+    color: var(--dkblue);
+  width: 100%;
+  font-size: 80%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.text a {
+    text-align: center;
+    color: var(--orange);
+    font-weight: 900;
+    
+}
+.text a:hover {
+    color: var(--orangeBorder);
+    
+}
+
+/* Section about */
+
+.section-about {
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0 ;
+}
+
+.section-about img {
+    max-width: 344px;
+
+}
+.section-about section{
+
+
+    display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+    gap: 1rem;
+
+}
+
+/* footer section */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+/* gradient line  */
+.gradient{
+    background: linear-gradient(90deg, rgb(192, 99, 46) 0%, rgb(49, 170, 197) 100%);
+   box-shadow: 5px 0px 4px 2px  rgba(214, 107, 19, 0.616), 5px 2px 8px 2px  rgba(49, 170, 197, 0.616);
+   
+    height: 2px;
+}
+
+.hidden{
+    display: none;
+}
+
+/* descktop view */
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+
+
+.section-cards { 
+grid-template-columns: auto auto auto;
+
+}
+.section-cards > article img {
+    
+  max-width: 100%;
+  min-width: 15rem;
+  
+ 
+}
+
+.section-cards .text  {
+    padding: 0.7rem;
+    padding-top: 1.5rem;
+}
+
+
+/* .section-about */
+
+.section-about section{
+    padding: 0;
+  display: grid;  
+  grid-template-columns: 2fr 344px;
+  gap: 1rem;
+    
+}
+
+
+.hidden{
+    display: inline;
+}
+
+
+}
