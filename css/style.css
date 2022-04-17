@@ -21,6 +21,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -289,4 +290,23 @@ grid-template-columns: auto auto auto;
 }
 
 
+}
+.button{
+  width: 100% ;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+}
+.button .gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background:#E95B0B ;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 25px;
+  border-radius: 10px;
 }
